@@ -5,7 +5,7 @@ import telebot
 ##TOKEN DETAILS
 TOKEN = "Votes"
 
-BOT_TOKEN = "5107693505:AAGZx_QyIPvSJd1dsj8O8GsYBGHGDrwkUSg"
+BOT_TOKEN = "5266865641:AAFR9q_vsCyhMHY2vwMF1Jd7v9xW0xKK_rQ"
 PAYMENT_CHANNEL = "@veiwsproof" #add payment channel here including the '@' sign
 OWNER_ID = 948065518 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = ["@paytmlootandearns","@freeplp1","@veiwsproof"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
