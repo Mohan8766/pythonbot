@@ -17,7 +17,7 @@ Per_Refer = 4.5 #add per refer bonus here
 bot = telebot.TeleBot(BOT_TOKEN)
 
 def check(id):
-    for i in CHANNELS:
+    for i in @paytmlootandearns:
         check = bot.get_chat_member(i, id)
         if check.status != 'left':
             pass
