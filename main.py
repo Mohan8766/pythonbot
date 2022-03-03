@@ -270,7 +270,7 @@ def trx_address(message):
    try:
     if message.text == "🚫 Cancel":
         return menu(message.chat.id)
-    if len(message.text) > 14:
+    if len(message.text) > 2:
         user_id = message.chat.id
         user = str(user_id)
         data = json.load(open('users.json', 'r'))
@@ -282,7 +282,7 @@ def trx_address(message):
         return menu(message.chat.id)
     else:
         bot.send_message(
-            message.chat.id, "*⚠️ It's Not a Valid Vote Address!*", parse_mode="Markdown")
+            message.chat.id, "*⚠️ It's Not a Valid Logo Name!*", parse_mode="Markdown")
         return menu(message.chat.id)
    except:
         bot.send_message(message.chat.id, "This command having error pls wait for ficing the glitch by admin")
