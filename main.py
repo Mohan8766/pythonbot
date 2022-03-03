@@ -5,10 +5,10 @@ import telebot
 ##TOKEN DETAILS
 TOKEN = "Logos"
 
-BOT_TOKEN = "5266865641:AAFR9q_vsCyhMHY2vwMF1Jd7v9xW0xKK_rQ"
+BOT_TOKEN = "5223650347:AAFrMtnpO80-1KU7Mo3BsOhtVzXy4HAeLQ4"
 PAYMENT_CHANNEL = "@veiwsproof" #add payment channel here including the '@' sign
 OWNER_ID = 948065518 #write owner's user id here.. get it from @MissRose_Bot by /id
-CHANNELS = ["@paytmlootandearns","@veiwsproof"]#add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
+CHANNELS = ["@paytmlootandearns","@pubgliteredeemcodesfree","@veiwsproof"]#add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
 Daily_bonus = 0.5 #Put daily bonus amount here!
 Mini_Withdraw = 2  #remove 0 and add the minimum withdraw u want to set
@@ -98,7 +98,7 @@ def start(message):
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
             text='🤼‍♂️ Joined', callback_data='check'))
-        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ "@paytmlootandearns","@veiwsproof" *"
+        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ "@paytmlootandearns","@pubgliteredeemcodesfree","@veiwsproof" *"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -154,7 +154,7 @@ def query_handler(call):
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
                 text='🤼‍♂️ Joined', callback_data='check'))
-            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️" @paytmlootandearns "," @veiwsproof" *"
+            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️" @paytmlootandearns ","@pubgliteredeemcodesfree"," @veiwsproof" *"
             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
