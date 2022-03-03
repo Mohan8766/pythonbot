@@ -3,16 +3,16 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "Votes"
+TOKEN = "Logos"
 
 BOT_TOKEN = "5266865641:AAFR9q_vsCyhMHY2vwMF1Jd7v9xW0xKK_rQ"
 PAYMENT_CHANNEL = "@veiwsproof" #add payment channel here including the '@' sign
 OWNER_ID = 948065518 #write owner's user id here.. get it from @MissRose_Bot by /id
-CHANNELS = ["@paytmlootandearns","@freeplp1","@veiwsproof"]#add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
+CHANNELS = ["@paytmlootandearns","@veiwsproof"]#add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
-Daily_bonus = 1 #Put daily bonus amount here!
-Mini_Withdraw = 10  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 4.5 #add per refer bonus here
+Daily_bonus = 0.5 #Put daily bonus amount here!
+Mini_Withdraw = 2  #remove 0 and add the minimum withdraw u want to set
+Per_Refer = 1 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -98,7 +98,7 @@ def start(message):
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
             text='🤼‍♂️ Joined', callback_data='check'))
-        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ @paytmlootandearns @freeeplp1 @veiwsproof *"
+        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ "@paytmlootandearns","@veiwsproof" *"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -116,7 +116,7 @@ def query_handler(call):
             user_id = call.message.chat.id
             user = str(user_id)
             bot.answer_callback_query(
-                callback_query_id=call.id, text='✅ You joined Now yu can earn money')
+                callback_query_id=call.id, text='✅ You joined Now yu can earn logos')
             bot.delete_message(call.message.chat.id, call.message.message_id)
             if user not in data['refer']:
                 data['refer'][user] = True
@@ -154,7 +154,7 @@ def query_handler(call):
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
                 text='🤼‍♂️ Joined', callback_data='check'))
-            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ @paytmlootandearns @freeplp1 @veiwsproof*"
+            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️" @paytmlootandearns "," @veiwsproof" *"
             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
@@ -206,7 +206,7 @@ def send_text(message):
 
         keyboard = telebot.types.ReplyKeyboardMarkup(True)
         keyboard.row('🚫 Cancel')
-        send = bot.send_message(message.chat.id, "_⚠️Send your post link note public._",
+        send = bot.send_message(message.chat.id, "_⚠️Send your logo Name ._",
                                 parse_mode="Markdown", reply_markup=keyboard)
         # Next message will call the name_handler function
         bot.register_next_step_handler(message, trx_address)
@@ -276,7 +276,7 @@ def trx_address(message):
         data = json.load(open('users.json', 'r'))
         data['wallet'][user] = message.text
 
-        bot.send_message(message.chat.id, "*💹Your Vote wallet set to " +
+        bot.send_message(message.chat.id, "*💹Your Logo Name set to " +
                          data['wallet'][user]+"*", parse_mode="Markdown")
         json.dump(data, open('users.json', 'w'))
         return menu(message.chat.id)
