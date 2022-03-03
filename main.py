@@ -98,7 +98,7 @@ def start(message):
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
             text='🤼‍♂️ Joined', callback_data='check'))
-        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ "@paytmlootandearns","@pubgliteredeemcodesfree","@veiwsproof" *"
+        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ @paytmlootandearns @pubgliteredeemcodesfree @veiwsproof *"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -154,7 +154,7 @@ def query_handler(call):
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
                 text='🤼‍♂️ Joined', callback_data='check'))
-            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️" @paytmlootandearns ","@pubgliteredeemcodesfree"," @veiwsproof" *"
+            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ @paytmlootandearns @pubgliteredeemcodesfree @veiwsproof *"
             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
